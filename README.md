@@ -1,2 +1,4 @@
 # type-less-2018
-CBioVikings workshop on using the unix command line
+CBioVikings workshop on using the unix command line.
+
+As bioinformaticians, we spend a lot of time at the unix command line.  Many common data manipulation tasks can of course be accomplished by writing a small program, but there is also a plethora of unix tools available that can accomplish the same results with less keystrokes.  Unix commands aren’t always intuitive or easy to remember, so this workshop will introduce 3 different ways that you can extend your command line toolbox so that it works for you.  We will walk through examples of aliases, shell functions and shell scripts motivated by real-world use cases.  You will leave this workshop with the desire to streamline your command line experience, and the knowledge and power to make that happen!  This workshop will be useful to both beginners and to people who feel more comfortable on the command line.
