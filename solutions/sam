@@ -1,0 +1,10 @@
+# add this function to your ~/.zshrc or ~/.bash_profile file
+
+sam () {
+	if [[ -f "$1" ]]; then 
+     input="$1" 
+else
+     input="-"
+	fi
+    cat $input | nl | shuf | head | sort -n | cut -f2-
+}

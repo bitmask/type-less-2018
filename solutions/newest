@@ -1,0 +1,28 @@
+# add the appropriate version of this function to your ~/.zshrc or ~/.bash_profile file
+
+# version compatible with gnu find
+
+newest () { 
+    local lines=10
+    if [[ $1 != "" ]]; then
+        lines=$1
+    fi
+    find . -type f -printf '%T@ %p \n’ |
+    sort -n |
+    tail -n $lines |
+    cut -f2- -d " "
+}
+
+# version compatible with standard Mac coreutils
+
+newest () { 
+    local lines=10
+    if [[ $1 != "" ]]; then
+        lines=$1
+    fi
+    find . -type f -print0 | 
+    xargs -0 stat -f "%m %N" | 
+    sort -n | 
+    tail -n $lines |
+    cut -f2 -d " "
+}
